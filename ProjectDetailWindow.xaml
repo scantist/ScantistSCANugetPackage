@@ -1,0 +1,27 @@
+﻿<platformUi:DialogWindow x:Class="ScantistSCA.ProjectDetailWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScantistSCA"
+             xmlns:platformUi="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
+             mc:Ignorable="d" Height="267.704" Width="403.262">
+    <Grid Name="MCGrid" Width="400" Background="LightSteelBlue" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <Button x:Name="btnSelectFile" Grid.Row="0" Content="Select Solution File" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" Click="btnSelectFile_Click"/>
+        <TextBox x:Name="txtFileName" Grid.Row="0" HorizontalAlignment="Right" Height="23" Margin="0,10,24,0" TextWrapping="Wrap" Text="Please select solution file." VerticalAlignment="Top" Width="257" IsEnabled="False"/>
+        <Label Name="lblServerUrl"  Grid.Row="1" HorizontalAlignment="Left" Height="23" Margin="10,6,0,16" Content="Server Url" HorizontalContentAlignment="Right" Width="104" />
+        <TextBox x:Name="txtServerUrl" Grid.Row="1" HorizontalAlignment="Right" Height="23" Margin="0,10,24,0" TextWrapping="Wrap" Text="https://api.scantist.io/" VerticalAlignment="Top" Width="257"  />
+        <Label Name="lblToken"  Grid.Row="2" HorizontalAlignment="Left" Height="23" Margin="10,6,0,16" Content="Token" Width="104" HorizontalContentAlignment="Right" />
+        <TextBox x:Name="txtToken" Grid.Row="2" HorizontalAlignment="Right" Height="23" Margin="0,10,24,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="257"/>
+        <Label Name="lblProjectName"  Grid.Row="3" HorizontalAlignment="Left" Height="23" Margin="10,6,0,16" Content="Project Name" Width="104" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="txtProjectName" Grid.Row="3" HorizontalAlignment="Right" Height="23" Margin="0,10,24,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="257"/>
+        <Button x:Name="btnOk" Grid.Row="4" Content="Ok" HorizontalAlignment="Center" Height="23" Margin="10,0,0,0" Click="btnOk_Click" Width="100"/>
+    </Grid>
+</platformUi:DialogWindow>
